@@ -1,0 +1,58 @@
+// Working program with FastIO
+import java.io.*;
+import java.util.*;
+ 
+public class Main
+{
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        while(true) {
+        String str = br.readLine();
+        //int a=Integer.parseInt(str);          //reads integer
+        if(str == null) {
+			System.out.println("breaking");
+			break;
+		}
+        System.out.println(str);
+		}
+	}
+}
+
+----------------------------------------------my generated code----------------------
+
+
+class Main {
+	static class FastReader {
+		public BufferedReader br;
+		public StringTokenizer st;
+		public String tmp_string;
+		
+		public FastReader() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+		
+		String next() throws IOException {
+			while(st == null || !st.hasMoreElements()) {
+				tmp_string = br.readLine();
+				if(tmp_string == null)
+					return null;
+				else
+					st = new StringTokenizer(tmp_string);
+			}
+			return st.nextToken();
+		}
+		
+		String nextLine() throws IOException {
+			return br.readLine();
+		}
+	}
+	
+	public static void main(String args[]) throws IOException {
+		FastReader fr = new FastReader();
+		String x;
+		System.out.println(fr.nextLine());
+		while((x = fr.next()) != null) 
+				System.out.println(x);
+	}
+}
+

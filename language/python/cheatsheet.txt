@@ -1,0 +1,120 @@
+My Template:
+
+from sys import *
+from bisect import *
+from collections import *
+from itertools import *
+from fractions import *
+from decimal import *
+
+Input = []
+
+#stdin = open('in', 'r')
+#stdout = open('out', 'w')
+
+def Out(x):
+    stdout.write(str(x) + '\n')
+
+def In():
+    return stdin.readline().strip()
+
+def inputGrab():
+    for line in stdin:
+        Input.extend(map(str, line.strip().split()))
+'''--------------------------------------------------------------------------------'''
+
+def main():
+    
+if __name__ == '__main__':
+    main()
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+Data Structures:
+
+1D List: 
+arr = []
+arr = [0]*100                           # initializing array
+arr.append(val)                         # push_back
+a = list(map(int, In().split()))        # direct array input
+
+2D List:
+arr = [[] for i in range(n)]        # n is the number of row, this is a 2d vector
+matrix = [[]*n for i in range(n)]   # n is the number of row, this is a matix
+
+Set:
+
+Set = set()
+Set.add(val)                        # insert val in set
+
+Binary Search:
+lower_bound = bisect_left(arr, val)
+upper_bound = bisect_right(arr, val)
+
+
+Permutations:
+
+v = 'ABCD'
+from itertools import permutations
+for p in permutations(v):
+    print(" ".join(p))
+
+
+Combinations:
+
+v = 'ABCD'
+from itertools import combinations
+for c in combinations(v, 2):
+    print(" ".join(c))
+
+
+GCD :
+
+from fractions import *
+GCD = gcd(x, y)
+
+
+Fractions :
+
+from fractions import *
+frac = Fraction(x, y)
+print(frac.numerator, frac.denominator)     # prints the fraction
+
+#supports all operations
+
+frac1 = Fraction(a, b).limit_denominator(k)     # will find such a fraction that has denominator less or equal to k
+                                                # and will be in the smallest distant to a/b
+Decimals :
+                            # is used for accurate result
+from decimal import *
+x = Decimal(s)              # s can be string or other data type
+x.as_tuple()                # returns sign, decimal value and size of decimal as tuple
+
+
+String:
+
+str.lower()
+str.upper()
+
+''.join(p)              # p is a list of string, it will join together
+p.split(' ')            # p is a string containing spaces, this will split it in seperate strings
+str.replace('+', '')    # str contains '+' charechter, this will replace all of it with '' (remove it)
+
+
+
+Date And Time:
+
+from datetime import *
+
+Cal = date(year, month, day)        # creating a date object
+
+Cal.year
+Cal.month
+Cal.day
+
+delta = timedelta(year, month, day)     # time delta creates an object which can be used to negate from date & time
+Cal2 = Cal - delta                      # Going back 'delta' days
+
